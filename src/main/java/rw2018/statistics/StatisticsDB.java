@@ -5,10 +5,9 @@ import java.io.File;
 /**
  * This interface describes the access to the statistics database. The
  * statistics database stores how frequently a resource occurs for each
- * {@link TriplePosition} in each chunk. An example for 3 ressources and 2
- * chunks would be:
+ * {@link TriplePosition} in each chunk.
  * <table style="border: 1px solid black;border-collapse: collapse;">
- * <thead>
+ * <caption>Example for 3 resources and 2 chunks.</caption> <thead>
  * <tr style="border: 1px solid black;">
  * <th style="border: 1px solid black;" rowspan="2">Resource Id</th>
  * <th style="border: 1px solid black;" colspan="2">Subject Position</th>

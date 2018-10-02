@@ -49,8 +49,11 @@ public class EncodedFileInputStream implements AutoCloseable, Iterable<Statement
    * The input must be closed!
    * 
    * @param input
+   *          {@link EncodedFileInputStream}
    * @throws FileNotFoundException
+   *           if file does not exist
    * @throws IOException
+   *           if input throws an {@link IOException}
    */
   public EncodedFileInputStream(EncodedFileInputStream input)
           throws FileNotFoundException, IOException {
@@ -72,6 +75,7 @@ public class EncodedFileInputStream implements AutoCloseable, Iterable<Statement
    * @throws EOFException
    *           if the end of the file is reached
    * @throws IOException
+   *           if {@link #input} causes an {@link IOException}
    */
   public Statement read() throws EOFException, IOException {
     byte[] subject = inputFormat.isSubjectEncoded() ? readEncodedLong() : readString();
